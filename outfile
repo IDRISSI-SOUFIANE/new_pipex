@@ -1,0 +1,7 @@
+total 136
+-rwxr-xr-x  1 sidrissi  2024_khouribga  50864 Feb 13 21:46 a.out
+-rw-r--r--  1 sidrissi  2024_khouribga   2036 Feb 12 21:14 ft_split.c
+-rwxr-xr-x  1 sidrissi  2024_khouribga      0 Feb 13 21:46 outfile
+-rw-r--r--  1 sidrissi  2024_khouribga   2984 Feb 13 21:39 pipex.c
+-rw-r--r--  1 sidrissi  2024_khouribga    652 Feb 13 21:35 pipex_utils.c
+-rw-r--r--  1 sidrissi  2024_khouribga   1547 Feb 13 21:34 utils.c
