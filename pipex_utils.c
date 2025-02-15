@@ -22,18 +22,29 @@ char    *get_path(t_data *data)
     char    *joined_slash;
     char    *path_of_cmd;
     int     i;
-
+    char    *first_cmd;
+/*do some change here!!!!!!!!*/
     i = 0;
+    // first_cmd = data->cmd[0];
     while (data->path[i])
     {
         joined_slash = ft_strjoin(data->path[i], "/");
-        path_of_cmd = ft_strjoin(joined_slash, data->cmd[0]);
+        path_of_cmd = ft_strjoin(joined_slash,  data->cmd[0]);
         free(joined_slash);
         if (access(path_of_cmd, F_OK) == 0)
             return (path_of_cmd);
-        free(path_of_cmd);
+        // free(path_of_cmd);
         i++;
     }
+    data->cmd[0] = first_cmd;
     return (NULL);
 }
-
+int	ft_ok(char **cmd)
+{
+    char *cmde;
+    
+    cmde = cmd[0];
+	if (access(cmde, F_OK) == 0)
+        return (0);
+	return (1);
+}

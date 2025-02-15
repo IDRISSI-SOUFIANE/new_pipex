@@ -122,3 +122,23 @@ char *ft_strjoin(char *s1, char *s2)
 	ft_strcat(s, s2);
 	return (s);
 }
+
+void	ft_putstr(char *cmd_path, char *error)
+{
+	int	i;
+
+	i = 0;
+	while (error[i])
+	{
+		write(2, &error[i], 1);
+		i++;
+	}
+	write(2, " ", 1);
+	i = 0;
+	while (error[i])
+	{
+		write(2, &cmd_path[i], 1);
+		i++;
+	}
+	write(2, "\n", 1);
+}
